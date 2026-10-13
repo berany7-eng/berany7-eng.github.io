@@ -28,17 +28,31 @@ header {
   border-bottom: 1px solid #31423e;
 }
 
-header p {
-  margin: 0;
-}
-
-header p:first-child {
+.brand {
   color: #62d7aa;
   font-weight: 700;
   letter-spacing: 0.08em;
+  text-decoration: none;
 }
 
-header p:last-child {
+nav {
+  display: flex;
+  gap: 16px;
+}
+
+nav a {
+  color: #b7c7c1;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #70e7b9;
+  text-decoration: underline;
+}
+
+.status {
   color: #a8bbb4;
   font-size: 0.9rem;
 }
