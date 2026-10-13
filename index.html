@@ -3,60 +3,58 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Radekův rozcestník</title>
-  <meta name="description" content="Osobní rozcestník Radka Kusla.">
-  <style>
-    :root {
-      color-scheme: dark;
-      font-family: system-ui, sans-serif;
-      background: #10151f;
-      color: #edf2f7;
-    }
-
-    body {
-      min-height: 100vh;
-      margin: 0;
-      display: grid;
-      place-items: center;
-      padding: 24px;
-      box-sizing: border-box;
-    }
-
-    main {
-      width: min(100%, 620px);
-      padding: 42px;
-      border: 1px solid #2a3648;
-      border-radius: 20px;
-      background: #171f2c;
-      box-shadow: 0 20px 60px #0006;
-    }
-
-    h1 { margin: 0 0 10px; }
-    p { color: #b8c4d4; line-height: 1.6; }
-
-    a {
-      display: block;
-      margin-top: 14px;
-      padding: 16px 18px;
-      border-radius: 12px;
-      background: #24344d;
-      color: #fff;
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    a:hover { background: #31598d; }
-  </style>
+  <title>RDKUSL / LAB</title>
+  <meta name="description" content="Digitální hřiště pro technické projekty a experimenty.">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <main>
-    <h1>Radekův digitální rozcestník</h1>
-    <p>
-      Vítej. Tady postupně vzniká moje osobní digitální základna:
-      projekty, technické experimenty a vlastní služby.
-    </p>
 
-    <a href="https://github.com/berany7-eng">GitHub — berany7-eng</a>
+<body>
+  <header>
+    <p>RDKUSL / LAB</p>
+    <p>Veřejná část online</p>
+  </header>
+
+  <main>
+    <section aria-labelledby="uvod">
+      <p>OSOBNÍ DIGITÁLNÍ ZÁKLADNA</p>
+
+      <h1 id="uvod">Digitální hřiště pro zvědavého technika.</h1>
+
+      <p>
+        Experimenty doma, poznámky z cesty a odkazy na věci,
+        které stojí za sdílení.
+      </p>
+    </section>
+
+    <section aria-labelledby="ted-stavim">
+      <h2 id="ted-stavim">Teď stavím</h2>
+      <p>Vlastní web, domácí infrastrukturu a technické projekty.</p>
+    </section>
+
+    <section aria-labelledby="odkazy">
+      <h2 id="odkazy">Prozkoumej</h2>
+
+      <ul>
+        <li>
+          <a href="https://github.com/berany7-eng">GitHub — berany7-eng</a>
+          <p>Projekty a učení v praxi.</p>
+        </li>
+
+        <li>
+          <strong>Veřejný deník</strong>
+          <p>Co jsem se naučil — připravuje se.</p>
+        </li>
+
+        <li>
+          <strong>Stav služeb</strong>
+          <p>Zveřejním později, až to bude dávat smysl.</p>
+        </li>
+      </ul>
+    </section>
   </main>
+
+  <footer>
+    <p>XXX</p>
+  </footer>
 </body>
 </html>
