@@ -1,12 +1,31 @@
-/* Barvy a písmo pro celý web */
 :root {
   color-scheme: dark;
+  --background: #101817;
+  --surface: #182421;
+  --surface-hover: #20312d;
+  --text: #eaf2ef;
+  --muted: #b7c7c1;
+  --subtle: #81948d;
+  --accent: #70e7b9;
+  --accent-soft: #62d7aa;
+  --border: #31423e;
+
   font-family: system-ui, sans-serif;
-  background: #101817;
-  color: #eaf2ef;
 }
 
-/* Zahrne odsazení do vypočítané šířky prvků */
+:root.light-theme {
+  color-scheme: light;
+  --background: #f3f7f5;
+  --surface: #ffffff;
+  --surface-hover: #e8f4ee;
+  --text: #17251f;
+  --muted: #40564c;
+  --subtle: #63776e;
+  --accent: #087b51;
+  --accent-soft: #0b6d49;
+  --border: #bfd2c8;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -16,20 +35,20 @@ body {
   min-height: 100vh;
   margin: 0 auto;
   padding: 32px 20px;
+  background: var(--background);
+  color: var(--text);
 }
 
-/* Horní lišta */
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+  gap: 18px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #31423e;
+  border-bottom: 1px solid var(--border);
 }
 
 .brand {
-  color: #62d7aa;
+  color: var(--accent-soft);
   font-weight: 700;
   letter-spacing: 0.08em;
   text-decoration: none;
@@ -41,30 +60,51 @@ nav {
 }
 
 nav a {
-  color: #b7c7c1;
+  color: var(--muted);
   font-size: 0.9rem;
-  font-weight: 400;
   text-decoration: none;
 }
 
 nav a:hover {
-  color: #70e7b9;
+  color: var(--accent);
   text-decoration: underline;
 }
 
-.status {
-  color: #a8bbb4;
-  font-size: 0.9rem;
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
 }
 
-/* Hlavní obsah */
+.status {
+  color: var(--muted);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+#theme-toggle {
+  padding: 8px 10px;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font: inherit;
+  font-size: 0.85rem;
+}
+
+#theme-toggle:hover {
+  background: var(--surface-hover);
+  border-color: var(--accent);
+}
+
 main {
   margin-top: 56px;
 }
 
 section {
   padding: 28px 0;
-  border-bottom: 1px solid #31423e;
+  border-bottom: 1px solid var(--border);
 }
 
 section:first-child {
@@ -72,7 +112,7 @@ section:first-child {
 }
 
 section > p:first-child {
-  color: #62d7aa;
+  color: var(--accent-soft);
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -80,7 +120,7 @@ section > p:first-child {
 
 h1,
 h2 {
-  color: #ffffff;
+  color: var(--text);
 }
 
 h1 {
@@ -98,11 +138,10 @@ h2 {
 
 p {
   max-width: 620px;
-  color: #b7c7c1;
+  color: var(--muted);
   line-height: 1.65;
 }
 
-/* Seznam odkazů */
 ul {
   display: grid;
   gap: 12px;
@@ -113,8 +152,8 @@ ul {
 
 li {
   padding: 18px;
-  background: #182421;
-  border: 1px solid #31423e;
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 12px;
 }
 
@@ -124,7 +163,7 @@ li p {
 }
 
 a {
-  color: #70e7b9;
+  color: var(--accent);
   font-weight: 700;
   text-decoration: none;
 }
@@ -133,7 +172,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Patička */
 footer {
   padding: 28px 0;
   text-align: center;
@@ -141,12 +179,11 @@ footer {
 
 footer p {
   margin: 0;
-  color: #81948d;
+  color: var(--subtle);
   font-size: 0.85rem;
 }
 
-/* Úprava pro malé displeje */
-@media (max-width: 520px) {
+@media (max-width: 620px) {
   body {
     padding: 24px 16px;
   }
@@ -154,6 +191,14 @@ footer p {
   header {
     align-items: flex-start;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
+
+  .header-actions {
+    margin-left: 0;
   }
 }
