@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Titulek</title>
+  <meta name="description" content="popis stránky">
+  <link rel="stylesheet" href="style.css?v=2">
+</head>
+
+<body>
+<header>
+  <a class="brand" href="/">nadpis</a>
+
+  <nav aria-label="Hlavní navigace">
+    <a href="#odkazy">Odkazy</a>
+  </nav>
+
+  <div class="header-actions">
+
+    <button
+      id="theme-toggle"
+      type="button"
+      aria-label="Přepnout barevný motiv"
+      aria-pressed="false"
+    >
+      Světlý režim
+    </button>
+  </div>
+</header>
+  <main>
+    <section aria-labelledby="uvod">
+      <p>Nadpis</p>
+
+      <h1 id="uvod">popis stránky</h1>
+
+      <p>
+        úvodní slovo 
+      </p>
+    </section>
+
+    <section aria-labelledby="Co-dělám">
+      <h2 id="ted-stavim">Co dělám</h2>
+      <p>popis co dělám</p>
+    </section>
+
+    <section aria-labelledby="odkazy">
+      <h2 id="odkazy">Prozkoumej</h2>
+
+      <ul>
+        <li>
+          <a href="https://berany7-eng.github.io/">Odkaz 1</a>
+          <p>Popis odkaz1.</p>
+        </li>
+
+         <li>
+          <a href="https://berany7-eng.github.io/">Odkaz 2</a>
+          <p>Popis odkaz2.</p>
+        </li>
+
+          <li>
+          <a href="https://berany7-eng.github.io/">Odkaz 3</a>
+          <p>Popis odkaz3.</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>XXX</p>
+  </footer>
+<script src="script.js"></script>
+</body>
+</html>
