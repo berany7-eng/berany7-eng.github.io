@@ -170,11 +170,12 @@ a {
 
 a:hover {
   text-decoration: underline;
-  a:focus-visible,
+}
+
+a:focus-visible,
 button:focus-visible {
   outline: 3px solid var(--accent);
   outline-offset: 3px;
-}
 }
 
 footer {
