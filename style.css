@@ -142,7 +142,7 @@ p {
   line-height: 1.65;
 }
 
-ul {
+.card-list {
   display: grid;
   gap: 12px;
   margin: 0;
@@ -150,14 +150,14 @@ ul {
   list-style: none;
 }
 
-li {
+.card-list li {
   padding: 18px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 12px;
 }
 
-li p {
+.card-list li p {
   margin: 6px 0 0;
   font-size: 0.9rem;
 }
